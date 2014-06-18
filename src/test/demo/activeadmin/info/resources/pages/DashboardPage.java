@@ -12,7 +12,7 @@ public class DashboardPage {
     private static final By MESSAGE = By.id("flash_notice");
     private static final By WELCOME_MESSAGE = By.id("auth");
 
-    public static boolean messageIsDisplayed(String message) {
+    public static boolean displaysMessage(String message) {
         boolean isDisplayed = false;
         List<WebElement> elements = waitForAllElements(MESSAGE);
         for (WebElement element : elements) {
@@ -21,7 +21,7 @@ public class DashboardPage {
         return isDisplayed;
     }
 
-    public static boolean welcomeMessageIsDisplayed(String message) {
+    public static boolean displaysWelcomeMessage(String message) {
         String actualMessage = waitForElement(WELCOME_MESSAGE).getText();
         return actualMessage.contains(message);
     }

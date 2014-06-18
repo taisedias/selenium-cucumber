@@ -14,6 +14,10 @@ public class Driver {
     private static WebDriver driver;
     private static int DEFAULT_WAIT_TIME = 5;
 
+    public static WebDriver getDriver() {
+        return driver;
+    }
+
     public static void createFirefoxDriver() {
         driver = new FirefoxDriver();
         setDefaultDriverTimeout();

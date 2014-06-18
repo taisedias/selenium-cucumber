@@ -21,7 +21,7 @@ public class LoginStepDefinition {
 
     @Então("^vejo a seguinte mensagem: \"([^\"]*)\"$")
     public void vejo_a_seguinte_mensagem(String output) throws Throwable {
-        assertTrue(DashboardPage.messageIsDisplayed(output));
+        assertTrue(DashboardPage.displaysMessage(output));
     }
 
     @Quando("^eu logar com os dados:$")
@@ -32,8 +32,8 @@ public class LoginStepDefinition {
     }
 
     @Então("^vejo a mensagem de boas vindas \"([^\"]*)\"$")
-    public void vejo_a_mensagem_de_boas_vindas(String message) throws Throwable {
-        assertTrue(DashboardPage.welcomeMessageIsDisplayed(message));
+    public void vejo_a_mensagem_de_boas_vindas(String output) throws Throwable {
+        assertTrue(DashboardPage.displaysWelcomeMessage(output));
     }
 
 }
