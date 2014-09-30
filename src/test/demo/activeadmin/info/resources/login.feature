@@ -13,7 +13,7 @@ Funcionalidade: Registro de usuário e login
 
 
   Cenário: Logar com um usuário já cadastrado
-    Quando eu logar com os dados:
+    Quando eu logo com os dados:
       | email           | password |
       | taise@gmail.com | 1234     |
     Então vejo a mensagem de boas vindas "Welcome Taise!"
